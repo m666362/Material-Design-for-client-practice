@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/airport"
     android:layout_height="match_parent"
-    android:background="#18ffff"
     android:orientation="vertical"
     android:paddingTop="60dp"
     tools:context=".MainActivity">
@@ -50,8 +50,8 @@
                     android:textSize="16sp" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:tint="#009AD3"
                     android:layout_alignParentRight="true"
                     android:layout_centerInParent="true"
@@ -109,7 +109,7 @@
                         android:tint="#AAAAAA"
                         android:layout_alignParentLeft="true"
                         android:layout_centerInParent="true"
-                        android:paddingLeft="3dp"
+                        android:paddingLeft="2dp"
                         android:rotation="90"
                         android:src="@drawable/ic_airplane_grey600_24dp" />
 
@@ -120,7 +120,7 @@
                         android:layout_toRightOf="@+id/planeIV"
                         android:foregroundGravity="center"
                         android:gravity="center"
-                        android:paddingLeft="5dp"
+                        android:paddingLeft="4dp"
                         android:text="Where to?"
                         android:textColor="#959595"
                         android:textSize="16sp" />
