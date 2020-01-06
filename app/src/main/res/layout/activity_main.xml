@@ -1,148 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/airport"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="60dp"
     tools:context=".MainActivity">
 
-    <androidx.cardview.widget.CardView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="16dp"
-        app:contentPadding="7dp">
+        android:layout_height="48dp"
+        android:background="#29354F"
+        android:paddingLeft="16dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="Multiple Account"
+            android:layout_centerVertical="true"
+            android:textColor="#fff"
+            android:textSize="24dp"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_dots_vertical_white_24dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/dotmenu"/>
 
-                <ImageView
-                    android:id="@+id/personIV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:tint="#AAAAAA"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/ic_account_grey600_24dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_lock_white_24dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/dotmenu"
+            android:id="@+id/lock"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_toRightOf="@+id/personIV"
-                    android:foregroundGravity="center"
-                    android:gravity="center"
-                    android:paddingLeft="8dp"
-                    android:text="1 traveler"
-                    android:textColor="#696969"
-                    android:textSize="16sp" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_block_helper_white_24dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/lock"
+            android:paddingRight="8dp"
+            android:id="@+id/block"/>
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:tint="#009AD3"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/ic_pencil_grey600_24dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#000"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="#29354F"
+        android:orientation="horizontal">
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-
-                <RelativeLayout
-
-                    android:id="@+id/loc"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:background="@drawable/heart_multiple"
-                    android:paddingLeft="16dp">
-
-                    <ImageView
-                        android:id="@+id/locationIV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:tint="#AAAAAA"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/ic_disc_grey600_24dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:layout_toRightOf="@+id/locationIV"
-                        android:foregroundGravity="center"
-                        android:gravity="center"
-                        android:paddingLeft="8dp"
-                        android:text="Where from?"
-                        android:textColor="#959595"
-                        android:textSize="16sp" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_below="@+id/loc"
-                    android:paddingLeft="16dp">
-
-                    <ImageView
-                        android:id="@+id/planeIV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:tint="#AAAAAA"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerInParent="true"
-                        android:paddingLeft="2dp"
-                        android:rotation="90"
-                        android:src="@drawable/ic_airplane_grey600_24dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:layout_toRightOf="@+id/planeIV"
-                        android:foregroundGravity="center"
-                        android:gravity="center"
-                        android:paddingLeft="4dp"
-                        android:text="Where to?"
-                        android:textColor="#959595"
-                        android:textSize="16sp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/confidential"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/pinterest"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/facebook"/>
 
 
-                </RelativeLayout>
 
-                <ImageView
-                    android:layout_width="39dp"
-                    android:layout_height="24dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:paddingLeft="16dp"
-                    android:src="@drawable/box_drawings_light_triple_dash_vertical_u2506_icon_256x256"
-                    android:tint="#AAAAAA"
-                    android:visibility="visible" />
-
-            </RelativeLayout>
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
 </LinearLayout>
 
